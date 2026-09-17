@@ -1,0 +1,310 @@
+:root {
+    --myWhite: #fff;
+    --myBlack: #181E24;
+    --myGreen: #79985b;
+    --myGreenDark: #4A6432;
+}
+
+
+body {
+    font-family: "Montserrat", sans-serif;
+    color: var(--myBlack);
+}
+
+/* HEADER */
+#common_header {
+    background-color: var(--myGreen);
+    padding: 5px;
+    border-radius: 10px;
+    margin: 5px 5px 30px 5px;
+
+    display: flex;
+    align-items: center;
+    gap: 3vw;
+}
+
+#header_image {
+    width: 20vw;
+    max-width: 150px;
+    min-width: 50px;
+    margin: 5px;
+    border: .4em solid var(--myWhite);
+    border-radius: 20vw;
+}
+
+#header_text {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    text-align: bottom;
+    gap: 2vw;
+
+    color: var(--myWhite);
+}
+
+nav {
+    display: flex;
+}
+
+nav a {
+    color: var(--myWhite);
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+a:hover{
+    color: var(--myBlack);
+    text-decoration: underline;
+}
+
+/*
+a:visited{
+    color: var(--myBlack)
+}
+*/
+
+/* BODY */
+h2 {
+    margin: 10px;
+    background-color: var(--myGreen);
+    border-radius: 10px;
+    color: var(--myWhite);
+    text-align: center;
+    padding: 5px;
+    text-transform: uppercase;
+}
+
+
+.topic_title button {
+    all: unset;              /* removes default button appearance */
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    font: inherit;           /* inherit the h2's font styling */
+    color: inherit;
+    text-align: center;
+}
+
+.topic_title button:hover {
+    background-color: var(--myGreenDark);
+    text-decoration: underline;
+}
+
+.topic_title button::after {
+    content: "‣";
+    float: right;
+    transition: transform 0.2s;
+    top: 1px;
+    margin-right: 10px;
+}
+
+.topic_title button[class~="open"]::after {
+    transform: rotate(90deg);
+}
+
+.topic_title {
+    max-width: 1500px;
+    margin: 0 auto; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.topic_text{
+    max-width: 1500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.topic_text > section {
+    width: 90%;
+    text-align: left;
+}
+
+.position {
+    font-style: italic;
+    text-transform: capitalize;
+}
+.year {
+    margin: 5px 0 10px;
+}
+
+/* Portfolio */
+.text_image_group {
+    display: flex;
+    align-items: center;
+    gap: 3vw;
+}
+
+.group_image {
+    width: 50vw;
+    min-width: 200px;
+    max-width: 300px;
+    margin: 5px;
+}
+
+.group_text {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    text-align: bottom;
+
+    color: var(--myBlack);
+}
+
+#intro {
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+hr {
+    max-width: 1500px;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: var(--myGreenDark);
+}
+
+.description {
+    margin: 0;
+    padding-left: 2em; 
+}
+
+.organisation {
+    font-variant: small-caps;
+}
+
+
+
+/* CLAUDE ADDITION */
+/* SKILLS GRID */
+#skills_text .skills_grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.skill_card {
+    background-color: var(--myWhite);
+    border: 1px solid var(--myGreen);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.card_title {
+    margin: 0;
+    padding: 8px 15px;
+    background-color: var(--myGreenDark);
+    color: var(--myWhite);
+    text-transform: uppercase;
+    font-size: 0.9em;
+    letter-spacing: 0.05em;
+}
+
+/* Shared padding for card content */
+.tag_list,
+.lang_list,
+.hobby_list {
+    padding: 15px;
+}
+
+/* TAGS (hard/soft skills, tools) */
+.tag_list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tag {
+    background-color: var(--myGreen);
+    color: var(--myWhite);
+    padding: 4px 12px;
+    border-radius: 1500px;
+    font-size: 0.85em;
+    white-space: nowrap;
+    transition: background-color 0.2s;
+}
+
+.tag:hover {
+    background-color: var(--myGreenDark);
+}
+
+/* LANGUAGES */
+.lang_list {
+    list-style: none;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.lang_row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 4px;
+    gap: 10px;
+}
+
+.lang_name {
+    font-weight: bold;
+}
+
+.lang_sub {
+    font-size: 0.8em;
+    color: var(--myBlack);
+    opacity: 0.7;
+    text-align: right;
+}
+
+.lang_bar {
+    height: 6px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.lang_bar > span {
+    display: block;
+    height: 100%;
+    background-color: var(--myGreen);
+    border-radius: 3px;
+}
+
+/* HOBBIES */
+.hobby_list {
+    list-style: none;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.hobby_row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hobby_name {
+    font-weight: bold;
+}
+
+.hobby_badge {
+    background-color: var(--myGreen);
+    color: var(--myWhite);
+    font-size: 0.75em;
+    padding: 2px 8px;
+    border-radius: 999px;
+    white-space: nowrap;
+}
+
+.hobby_sub {
+    font-size: 0.8em;
+    color: var(--myBlack);
+    opacity: 0.7;
+    margin-top: 2px;
+}
