@@ -28,8 +28,10 @@ a:hover {
     margin: 5px 5px 30px 5px;
 
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 3vw;
+
+    --avatar_size: clamp(100px, 20vw, 150px); 
 }
 
 #header_image {
@@ -43,12 +45,24 @@ a:hover {
 
 #header_text {
     display: flex;
+    flex: 1;
     flex-direction: column;
     align-items: left;
     text-align: bottom;
     gap: 2vw;
+    min-width: 0;
 
     color: var(--myWhite);
+}
+
+.page_title {
+    max-height: var(--avatar_size);
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
 }
 
 nav {
@@ -73,10 +87,6 @@ nav a {
 }
 
 @media (max-width: 600px) {
-    #common_header {
-        flex-wrap: wrap;
-    }
-
     #nav_toggle {
         display: block;
     }
@@ -90,7 +100,7 @@ nav a {
     }
 
     nav.nav_open {
-        max-height: 300px; /* enough to fit all items */
+        max-height: 300px;
     }
 
     nav a {
