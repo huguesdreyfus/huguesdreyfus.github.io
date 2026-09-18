@@ -14,4 +14,7 @@ $(document).ready(function(){
         $(this).nextUntil(":not(.child_tag)", ".child_tag").toggleClass("hidden");
     });
 
+    $(document).on("click", "#nav_toggle", function() {
+        $("nav").toggleClass("nav_open");
+    });
 });

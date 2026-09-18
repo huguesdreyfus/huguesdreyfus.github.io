@@ -12,6 +12,14 @@ body {
     color: var(--myBlack);
 }
 
+a {
+    color: var(--myGreen)
+}
+
+a:hover {
+    color: var(--myBlack);
+}
+
 /* HEADER */
 #common_header {
     background-color: var(--myGreen);
@@ -27,7 +35,7 @@ body {
 #header_image {
     width: 20vw;
     max-width: 150px;
-    min-width: 50px;
+    min-width: 100px;
     margin: 5px;
     border: .4em solid var(--myWhite);
     border-radius: 20vw;
@@ -53,8 +61,44 @@ nav a {
     margin: 0 5px;
 }
 
+#nav_toggle {
+    display: none; /* hidden on desktop */
+    background: none;
+    border: none;
+    color: var(--myWhite);
+    font-size: 1.5em;
+    cursor: pointer;
+    padding: 0;
+    align-self: flex-start;
+}
+
+@media (max-width: 600px) {
+    #common_header {
+        flex-wrap: wrap;
+    }
+
+    #nav_toggle {
+        display: block;
+    }
+
+    nav {
+        flex-direction: column;
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+
+    nav.nav_open {
+        max-height: 300px; /* enough to fit all items */
+    }
+
+    nav a {
+        margin: 8px 0;
+    }
+}
+
 a:hover{
-    color: var(--myBlack);
     text-decoration: underline;
 }
 
