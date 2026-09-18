@@ -3,6 +3,7 @@
     --myBlack: #181E24;
     --myGreen: #79985b;
     --myGreenDark: #4A6432;
+    --myGreenLight: #ADCC91;
 }
 
 
@@ -57,11 +58,7 @@ a:hover{
     text-decoration: underline;
 }
 
-/*
-a:visited{
-    color: var(--myBlack)
-}
-*/
+
 
 /* BODY */
 h2 {
@@ -74,6 +71,33 @@ h2 {
     text-transform: uppercase;
 }
 
+
+#intro,
+.topic_title,
+.topic_text,
+hr {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: var(--myGreenDark);
+}
+
+.topic_title,
+.topic_text {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.topic_text > section {
+    width: 90%;
+    text-align: left;
+}
 
 .topic_title button {
     all: unset;              /* removes default button appearance */
@@ -102,25 +126,13 @@ h2 {
     transform: rotate(90deg);
 }
 
-.topic_title {
-    max-width: 1500px;
-    margin: 0 auto; 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.topic_text{
-    max-width: 1500px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
-.topic_text > section {
-    width: 90%;
-    text-align: left;
-}
+
+
+
+
+
+
 
 .position {
     font-style: italic;
@@ -153,19 +165,6 @@ h2 {
     color: var(--myBlack);
 }
 
-#intro {
-    max-width: 1500px;
-    margin: 0 auto;
-}
-
-hr {
-    max-width: 1500px;
-    margin: 0 auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    color: var(--myGreenDark);
-}
-
 .description {
     margin: 0;
     padding-left: 2em; 
@@ -180,9 +179,9 @@ hr {
 /* CLAUDE ADDITION */
 /* SKILLS GRID */
 #skills_text .skills_grid {
-    width: 100%;
+    width: 90%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
     gap: 20px;
 }
 
@@ -230,6 +229,19 @@ hr {
 
 .tag:hover {
     background-color: var(--myGreenDark);
+}
+
+.tag.parent_tag {
+    cursor: pointer;
+}
+
+.tag.child_tag {
+    background-color: var(--myGreenLight);
+}
+
+.tag.child_tag.hidden {
+    background-color: var(--myGreenLight);
+    display: none;
 }
 
 /* LANGUAGES */

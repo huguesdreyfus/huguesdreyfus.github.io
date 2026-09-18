@@ -22,4 +22,11 @@ $(document).ready(function(){
         $("#skills_text").slideToggle(200);
         $(this).toggleClass("open")
     });
+
+    $('.parent_tag').on('click', function() {
+        $(this).nextUntil(':not(.child_tag)', '.child_tag').toggleClass('hidden');
+    });
+
+
+
 });
