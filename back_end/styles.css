@@ -20,10 +20,20 @@ a:hover {
     color: var(--myBlack);
 }
 
+
+
+
+
+
+
+
+
+
 /* HEADER */
 #common_header {
     background-color: var(--myGreen);
     padding: 5px;
+    padding-bottom: 15px;
     border-radius: 10px;
     margin: 5px 5px 30px 5px;
 
@@ -66,6 +76,11 @@ a:hover {
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
+}
+
+.page_title > a {
+    color: var(--myWhite);
+    text-decoration: none;
 }
 
 #nav_toggle {
@@ -111,9 +126,18 @@ nav a {
     }
 }
 
-a:hover {
+nav > a:hover {
     text-decoration: underline;
 }
+
+
+
+
+
+
+
+
+
 
 /* BODY */
 h2 {
@@ -183,6 +207,9 @@ hr {
 
 
 
+
+
+
 .position {
     font-style: italic;
     text-transform: capitalize;
@@ -217,6 +244,12 @@ hr {
 .organisation {
     font-variant: small-caps;
 }
+
+
+
+
+
+
 
 
 
@@ -256,6 +289,15 @@ hr {
 .hobby_list {
     padding: 15px;
 }
+
+
+
+
+
+
+
+
+
 
 /* TAGS (hard/soft skills, tools) */
 .tag_list {
@@ -306,6 +348,15 @@ hr {
     display: none;
 }
 
+
+
+
+
+
+
+
+
+
 /* LANGUAGES */
 .lang_list {
     list-style: none;
@@ -347,6 +398,15 @@ hr {
     background-color: var(--myGreen);
     border-radius: 3px;
 }
+
+
+
+
+
+
+
+
+
 
 /* HOBBIES */
 .hobby_list {

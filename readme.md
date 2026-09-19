@@ -5,7 +5,7 @@
 *Note: this website wasn't been vibe-coded. I did use AI (Claude, Sonnet5) for debugging purposes, but everything is basically hand-written by me without using a template, mostly using stackoverflow and w3schools.*
 
 ## Updates & Objectives
- - 19/09: minor update - minor layout content, added contact infos. 
+ - 19/09: minor update - layout and content update, added contact infos. 
  - 18/09: major update - layout now optimised for phone view, added content, simplified back-end functions.
  - 17/09: initial commit - working website but hardly optimised.
 
