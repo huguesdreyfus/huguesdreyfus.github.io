@@ -214,11 +214,6 @@ hr {
     color: var(--myBlack);
 }
 
-.description {
-    margin: 0;
-    padding-left: 2em; 
-}
-
 .organisation {
     font-variant: small-caps;
 }
