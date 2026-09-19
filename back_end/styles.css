@@ -290,7 +290,7 @@ hr {
 }
 
 .tag.parent_tag::after {
-    content: "×";
+    content: "+";
     position: absolute;
     right: 0.5em;
     top: 50%;
