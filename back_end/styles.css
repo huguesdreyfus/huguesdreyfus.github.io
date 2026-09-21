@@ -201,6 +201,16 @@ hr {
     text-align: left;
 }
 
+.group_logo {
+    float: right;
+    height: 100px;
+    width: auto;
+    max-width: 200px;
+    object-fit: contain;
+    border-radius: 5%;
+    margin-left: 5px;
+}
+
 
 
 
