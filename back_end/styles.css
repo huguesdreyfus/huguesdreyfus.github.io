@@ -211,7 +211,7 @@ hr {
     margin-left: 5px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
     .group_logo {
         max-width: 25vw;
     }
