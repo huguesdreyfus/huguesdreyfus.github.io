@@ -1,8 +1,8 @@
 # huguesdreyfus.github.io
 
-*Personal website of Hugues Dreyfus (he/him) - started as a project for a web programming class, but decided that it was way overdue to have one. Will update on a regular basis.*
+*Personal website of Hugues Dreyfus (he/him) - while it started as a project for a web programming class, I decided that it was way overdue to have one and kept it running. Will be updated on a regular basis (hopefully).*
 
-*Note: this website wasn't been vibe-coded. I did use AI (Claude, Sonnet5) for debugging purposes, but everything is basically hand-written by me without using a template, mostly using stackoverflow and w3schools.*
+*Note: this website wasn't vibe-coded. I did use AI (Claude, Sonnet5) for debugging purposes, but everything is basically hand-written by me without using a template, mostly using stackoverflow and w3schools.*
 
 ## Updates & Objectives
  - 22/09: major update - Night mode
