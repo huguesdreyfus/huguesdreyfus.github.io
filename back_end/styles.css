@@ -481,7 +481,6 @@ hr {
 /* DARK MODE */
 #darklight_toggle {
     color: var(--myZenith);
-    margin-left: 25px;
     transform: translateY(-25%);
 }
 
