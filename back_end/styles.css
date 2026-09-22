@@ -2,7 +2,7 @@
     --myZenith: #fff;
     --myNadir: #181E24;
     --myColour: #79985b;
-    --myColourContrasted: #4A6432;
+    --myColourContrasted: #406B1A;
     --myColourFaded: #ADCC91;
 }
 
@@ -115,7 +115,7 @@ nav a {
     margin: 8px 0;
 }
 
-@media (min-width: 400px) {
+@media (min-width: 500px) {
     nav {
         flex-direction: row;
         justify-content: center;
@@ -491,7 +491,7 @@ hr {
 .dark_mode {
     --myZenith: #181E24;
     --myNadir: #fff; 
-    --myColour: #4A6432;
+    --myColour: #406B1A;
     --myColourContrasted: #79985b;
     --myColourFaded: #ADCC91;
 }
