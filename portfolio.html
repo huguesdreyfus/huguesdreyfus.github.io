@@ -13,7 +13,15 @@
     <link rel="stylesheet" href="../back_end/styles.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/ec0d48779e.js" crossorigin="anonymous"></script>
     <script src="/back_end/js_functions.js"></script>
+
+    <script>
+        if (localStorage.getItem("dark_theme") === 1) {
+            $(":root").addClass("dark_mode");
+        }
+    </script>
+    
 </head>
 
 <body>
@@ -49,7 +57,7 @@
                 </div>
             </div>
         </section>    
-        <hr>
+        
 
 
         <section class="text_image_group topic_text" id="bio_cell">

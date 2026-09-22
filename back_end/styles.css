@@ -1,23 +1,24 @@
 :root {
-    --myWhite: #fff;
-    --myBlack: #181E24;
-    --myGreen: #79985b;
-    --myGreenDark: #4A6432;
-    --myGreenLight: #ADCC91;
+    --myZenith: #fff;
+    --myNadir: #181E24;
+    --myColour: #79985b;
+    --myColourContrasted: #4A6432;
+    --myColourFaded: #ADCC91;
 }
 
 
 body {
     font-family: "Montserrat", sans-serif;
-    color: var(--myBlack);
+    color: var(--myNadir);
+    background-color: var(--myZenith);
 }
 
 a {
-    color: var(--myGreen)
+    color: var(--myColour)
 }
 
 a:hover {
-    color: var(--myBlack);
+    color: var(--myNadir);
 }
 
 
@@ -31,9 +32,8 @@ a:hover {
 
 /* HEADER */
 #common_header {
-    background-color: var(--myGreen);
+    background-color: var(--myColour);
     padding: 5px;
-    padding-bottom: 15px;
     border-radius: 10px;
     margin: 5px 5px 30px 5px;
 
@@ -51,7 +51,7 @@ a:hover {
     min-width: 100px;
     margin: 5px;
     margin-right: 3vw;
-    border: .4em solid var(--myWhite);
+    border: .4em solid var(--myZenith);
     border-radius: 20vw;
 }
 
@@ -64,7 +64,7 @@ a:hover {
     gap: 2vw;
     min-width: 0;
 
-    color: var(--myWhite);
+    color: var(--myZenith);
 }
 
 .page_title {
@@ -79,7 +79,7 @@ a:hover {
 }
 
 .page_title > a {
-    color: var(--myWhite);
+    color: var(--myZenith);
     text-decoration: none;
 }
 
@@ -87,7 +87,7 @@ a:hover {
     order: 3;
     background: none;
     border: none;
-    color: var(--myWhite);
+    color: var(--myZenith);
     font-size: 2.5em;
     cursor: pointer;
     padding: 0 5vw 0 0;
@@ -110,7 +110,7 @@ nav.nav_open {
 }
 
 nav a {
-    color: var(--myWhite);
+    color: var(--myZenith);
     text-decoration: none;
     margin: 8px 0;
 }
@@ -122,7 +122,7 @@ nav a {
     }
 
     nav a {
-        margin: 0 5px;
+        margin: 5px 5px 15px;
     }
 }
 
@@ -142,9 +142,9 @@ nav > a:hover {
 /* BODY */
 h2 {
     margin: 10px;
-    background-color: var(--myGreen);
+    background-color: var(--myColour);
     border-radius: 10px;
-    color: var(--myWhite);
+    color: var(--myZenith);
     text-align: center;
     padding: 5px;
     text-transform: uppercase;
@@ -162,7 +162,7 @@ hr {
 hr {
     margin-top: 20px;
     margin-bottom: 20px;
-    color: var(--myGreenDark);
+    color: var(--myColourContrasted);
 }
 
 .topic_title,
@@ -178,7 +178,7 @@ hr {
 }
 
 .topic_title:hover {
-    background-color: var(--myGreenDark);
+    background-color: var(--myColourContrasted);
     text-decoration: underline;
 }
 
@@ -207,7 +207,7 @@ hr {
     width: auto;
     max-width: 200px;
     object-fit: contain;
-    border-radius: 5%;
+    border-radius: 10px;
     margin-left: 5px;
 }
 
@@ -240,10 +240,10 @@ hr {
 }
 
 .group_image {
-    width: 50vw;
+    width: 25%;
     min-width: 200px;
     max-width: 300px;
-    margin: 5px;
+    margin: 20px 5px 0;
 }
 
 .group_text {
@@ -252,7 +252,7 @@ hr {
     align-items: left;
     text-align: bottom;
 
-    color: var(--myBlack);
+    color: var(--myNadir);
 }
 
 .organisation {
@@ -278,8 +278,8 @@ hr {
 }
 
 .skill_card {
-    background-color: var(--myWhite);
-    border: 1px solid var(--myGreen);
+    background-color: var(--myZenith);
+    border: 1px solid var(--myColour);
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
@@ -291,8 +291,8 @@ hr {
 .card_title {
     margin: 0;
     padding: 8px 15px;
-    background-color: var(--myGreenDark);
-    color: var(--myWhite);
+    background-color: var(--myColourContrasted);
+    color: var(--myZenith);
     text-transform: uppercase;
     font-size: 0.9em;
     letter-spacing: 0.05em;
@@ -321,8 +321,8 @@ hr {
 }
 
 .tag {
-    background-color: var(--myGreen);
-    color: var(--myWhite);
+    background-color: var(--myColour);
+    color: var(--myZenith);
     padding: 4px 12px;
     border-radius: 1500px;
     font-size: 0.85em;
@@ -331,7 +331,7 @@ hr {
 }
 
 .tag:hover {
-    background-color: var(--myGreenDark);
+    background-color: var(--myColourContrasted);
 }
 
 .tag.parent_tag {
@@ -355,14 +355,25 @@ hr {
 }
 
 .tag.child_tag {
-    background-color: var(--myGreenLight);
+    background-color: var(--myColourFaded);
 }
 
 .tag.child_tag.hidden {
     display: none;
 }
 
+#icon_cpp {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
 
+#icon_cpp > svg {
+    width: 13px;
+    height: 13px;
+    fill: var(--myZenith);
+    flex-shrink: 0;
+}
 
 
 
@@ -389,12 +400,13 @@ hr {
 }
 
 .lang_name {
+    color: var(--myNadir);
     font-weight: bold;
 }
 
 .lang_sub {
     font-size: 0.8em;
-    color: var(--myBlack);
+    color: var(--myNadir);
     opacity: 0.7;
     text-align: right;
 }
@@ -409,7 +421,7 @@ hr {
 .lang_bar > span {
     display: block;
     height: 100%;
-    background-color: var(--myGreen);
+    background-color: var(--myColour);
     border-radius: 3px;
 }
 
@@ -442,8 +454,8 @@ hr {
 }
 
 .hobby_badge {
-    background-color: var(--myGreen);
-    color: var(--myWhite);
+    background-color: var(--myColour);
+    color: var(--myZenith);
     font-size: 0.75em;
     padding: 2px 8px;
     border-radius: 999px;
@@ -452,7 +464,35 @@ hr {
 
 .hobby_sub {
     font-size: 0.8em;
-    color: var(--myBlack);
+    color: var(--myNadir);
     opacity: 0.7;
     margin-top: 2px;
+}
+
+
+
+
+
+
+
+
+
+
+/* DARK MODE */
+#darklight_toggle {
+    color: var(--myZenith);
+    margin-left: 25px;
+    transform: translateY(-25%);
+}
+
+#darklight_toggle:hover {
+    cursor: pointer; 
+}
+
+.dark_mode {
+    --myZenith: #181E24;
+    --myNadir: #fff; 
+    --myColour: #4A6432;
+    --myColourContrasted: #79985b;
+    --myColourFaded: #ADCC91;
 }

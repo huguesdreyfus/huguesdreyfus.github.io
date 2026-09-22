@@ -1,4 +1,10 @@
 $(document).ready(function(){
+    /* Local Storage */
+    $(document).ready(function(){
+        if (localStorage.getItem("dark_theme") === "1") {
+            $(":root").addClass("dark_mode");
+        }});
+
     /*Loads common loader*/
     $("header").load("/back_end/commons.html #common_header");
 
@@ -17,4 +23,16 @@ $(document).ready(function(){
     $(document).on("click", "#nav_toggle", function() {
         $("nav").toggleClass("nav_open");
     });
+
+    /* Dark mode */
+    $(document).on("click", "#darklight_toggle", function() {
+        $(":root").toggleClass("dark_mode");
+
+        if ($(":root").hasClass("dark_mode")) {
+            localStorage.setItem("dark_theme", "1");
+        } else {
+            localStorage.setItem("dark_theme", "0");
+        }
+    });
+    
 });
