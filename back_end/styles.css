@@ -254,6 +254,7 @@ hr {
 .group_image {
     width: 30vw;
     min-width: 300px;
+    max-width: 60vw;
 
     margin: 3vw 5px 0;
 
