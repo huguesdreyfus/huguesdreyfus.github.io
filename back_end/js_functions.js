@@ -3,12 +3,13 @@ $(document).ready(function(){
     $(document).ready(function(){
         if (localStorage.getItem("dark_theme") === "1") {
             $(":root").addClass("dark_mode");
-        }});
+        }
+    });
 
-    /*Loads common loader*/
+    /* Loads common loader */
     $("header").load("/back_end/commons.html #common_header");
 
-    /*Toggling*/
+    /* Toggling */
     
     $(".topic_title").on("click", function(){
         $(this).toggleClass("expanded")
@@ -22,6 +23,12 @@ $(document).ready(function(){
 
     $(document).on("click", "#nav_toggle", function() {
         $("nav").toggleClass("nav_open");
+    });
+
+    /* Hard skills */
+    $(".parent_tag").hover(function() {
+        $(this).toggleClass("expanded")
+        $(this).nextUntil(":not(.child_tag)", ".child_tag").toggleClass("hidden");
     });
 
     /* Dark mode */
