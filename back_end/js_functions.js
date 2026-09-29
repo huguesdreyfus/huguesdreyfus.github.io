@@ -6,8 +6,11 @@ $(document).ready(function(){
         }
     });
 
+
     /* Loads common loader */
+
     $("header").load("/back_end/commons.html #common_header");
+
 
     /* Toggling */
     
@@ -16,22 +19,44 @@ $(document).ready(function(){
         $(this).nextUntil(":not(.topic_text)", ".topic_text").slideToggle(200);
     });
 
-    $(".parent_tag").on("click", function() {
-        $(this).toggleClass("expanded")
-        $(this).nextUntil(":not(.child_tag)", ".child_tag").toggleClass("hidden");
-    });
-
     $(document).on("click", "#nav_toggle", function() {
         $("nav").toggleClass("nav_open");
     });
 
+    
     /* Hard skills */
-    $(".parent_tag").hover(function() {
-        $(this).toggleClass("expanded")
-        $(this).nextUntil(":not(.child_tag)", ".child_tag").toggleClass("hidden");
+    
+    $(".parent_tag").on("click", function() {
+        if ($(this).hasClass("pinned")){
+            $(this).removeClass("pinned");
+            $(this).removeClass("expanded");
+            $(this).nextUntil(":not(.child_tag)", ".child_tag")
+                .stop(true, true)
+                .fadeOut("fast");
+        } else {
+            $(this).addClass("pinned");
+        }
     });
 
+    $(".parent_tag").on("mouseenter", function() {
+        if (!$(this).hasClass("pinned")) {
+            $(this).addClass("expanded");
+            $(this).nextUntil(":not(.child_tag)", ".child_tag")
+                .stop(true, true)
+                .fadeIn("fast");
+        }
+    }).on("mouseleave", function() {
+        if (!$(this).hasClass("pinned")) {
+            $(this).removeClass("expanded");
+            $(this).nextUntil(":not(.child_tag)", ".child_tag")
+                .stop(true, true)
+                .fadeOut("fast");
+        }
+    });
+
+
     /* Dark mode */
+    
     $(document).on("click", "#darklight_toggle", function() {
         $(":root").toggleClass("dark_mode");
 

@@ -372,21 +372,18 @@ hr {
     position: absolute;
     right: 0.5em;
     top: 50%;
-    transform: translateY(-50%) rotate(0deg);
-    transition: transform 0.2s ease;
+    transform: translateY(-55%) rotate(0deg);
+    transition: transform 0.3s ease;
     display: inline-block;
 }
 
 .tag.parent_tag.expanded::after {
-    transform: translateY(-50%) rotate(45deg);
+    transform: translateY(-50%) rotate(405deg);
 }
 
 .tag.child_tag {
-    background-color: var(--myColourFaded);
-}
-
-.tag.child_tag.hidden {
     display: none;
+    background-color: var(--myColourFaded);
 }
 
 #icon_cpp {
