@@ -29,10 +29,7 @@ $(document).ready(function(){
     $(".parent_tag").on("click", function() {
         if ($(this).hasClass("pinned")){
             $(this).removeClass("pinned");
-            $(this).removeClass("expanded");
-            $(this).nextUntil(":not(.child_tag)", ".child_tag")
-                .stop(true, true)
-                .fadeOut("fast");
+            $(this).toggleChildren("out");
         } else {
             $(this).addClass("pinned");
         }
@@ -40,17 +37,11 @@ $(document).ready(function(){
 
     $(".parent_tag").on("mouseenter", function() {
         if (!$(this).hasClass("pinned")) {
-            $(this).addClass("expanded");
-            $(this).nextUntil(":not(.child_tag)", ".child_tag")
-                .stop(true, true)
-                .fadeIn("fast");
+            $(this).toggleChildren("in");
         }
     }).on("mouseleave", function() {
         if (!$(this).hasClass("pinned")) {
-            $(this).removeClass("expanded");
-            $(this).nextUntil(":not(.child_tag)", ".child_tag")
-                .stop(true, true)
-                .fadeOut("fast");
+            $(this).toggleChildren("out");
         }
     });
 
@@ -68,3 +59,19 @@ $(document).ready(function(){
     });
     
 });
+
+
+
+$.fn.toggleChildren = function(direction="in") {
+    if (direction === "in") {
+        $(this).addClass("expanded");
+        $(this).nextUntil(":not(.child_tag)", ".child_tag")
+                .stop(true, true)
+                .fadeIn("fast");
+    } else if (direction === "out") {
+        $(this).removeClass("expanded");
+        $(this).nextUntil(":not(.child_tag)", ".child_tag")
+                .stop(true, true)
+                .fadeOut("fast");
+    };
+};
